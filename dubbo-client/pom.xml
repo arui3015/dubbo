@@ -11,7 +11,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-     <spring.version>4.0.5.RELEASE</spring.version>
+     <spring.version>4.3.6.RELEASE</spring.version>
   </properties>
   
   <dependencies>
@@ -26,60 +26,82 @@
       <artifactId>dubbo-api</artifactId>
       <version>0.0.1-SNAPSHOT</version>
     </dependency>
+    <dependency>
+      <groupId>zrp.pub</groupId>
+      <artifactId>support</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>zrp.pub</groupId>
+      <artifactId>dubbo-server</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
  	<dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>${spring.version}</version>
-            <scope>provided</scope>
      </dependency>
       <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
             <version>${spring.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
             <version>${spring.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
             <version>${spring.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
             <version>${spring.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
             <version>${spring.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-expression</artifactId>
             <version>${spring.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
             <version>${spring.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
             <version>${spring.version}</version>
-            <scope>provided</scope>
       </dependency>
+     <dependency>
+        <groupId>org.springframework.data</groupId>
+        <artifactId>spring-data-mongodb</artifactId>
+        <version>1.10.0.RELEASE</version>
+        <exclusions>
+        	<exclusion>
+        		<groupId>org.mongodb</groupId>
+        		<artifactId>mongo-java-driver</artifactId>
+        	</exclusion>
+        </exclusions>
+       </dependency>
+    <dependency>
+    	<groupId>org.springframework.data</groupId>
+    	<artifactId>spring-data-commons</artifactId>
+    	<version>1.13.0.RELEASE</version>
+	</dependency>
+	<dependency>
+   		 <groupId>org.mongodb</groupId>
+   		 <artifactId>mongo-java-driver</artifactId>
+    	<version>3.4.2</version>
+	</dependency>
       <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>

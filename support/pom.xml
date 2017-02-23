@@ -3,17 +3,17 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>zrp.pub</groupId>
-  <artifactId>dubbo-server</artifactId>
+  <artifactId>support</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>dubbo-server</name>
+  <name>support</name>
   <url>http://maven.apache.org</url>
 
-   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  <properties>
+     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-     <spring.version>4.0.5.RELEASE</spring.version>
+     <spring.version>4.3.6.RELEASE</spring.version>
   </properties>
 
  <dependencies>
@@ -22,16 +22,6 @@
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
-    </dependency>
-     <dependency>
-      <groupId>zrp.pub</groupId>
-      <artifactId>dubbo-api</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
-    </dependency>
-     <dependency>
-      <groupId>zrp.pub</groupId>
-      <artifactId>support</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
     </dependency>
  	<dependency>
             <groupId>org.springframework</groupId>
@@ -88,6 +78,27 @@
             <scope>provided</scope>
       </dependency>
       <dependency>
+        <groupId>org.springframework.data</groupId>
+        <artifactId>spring-data-mongodb</artifactId>
+        <version>1.10.0.RELEASE</version>
+        <exclusions>
+        	<exclusion>
+        		<groupId>org.mongodb</groupId>
+        		<artifactId>mongo-java-driver</artifactId>
+        	</exclusion>
+        </exclusions>
+       </dependency>
+    <dependency>
+    	<groupId>org.springframework.data</groupId>
+    	<artifactId>spring-data-commons</artifactId>
+    	<version>1.13.0.RELEASE</version>
+	</dependency>
+	<dependency>
+   		 <groupId>org.mongodb</groupId>
+   		 <artifactId>mongo-java-driver</artifactId>
+    	<version>3.4.2</version>
+	</dependency>
+      <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
             <version>1.8.0</version>
@@ -126,4 +137,17 @@
     	<version>0.10</version>
 	</dependency>
   </dependencies>
+      <build>
+        <finalName>ewei-account-logic</finalName>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
