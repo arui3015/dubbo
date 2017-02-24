@@ -27,7 +27,7 @@ public class MongoTest {
 			article.setTitle("ндуб");
 			article.setLink("http://javake.me");
 			article.setState(1);
-			article.setCreateTime(new Timestamp(new Date().getTime()));
+			article.setCreateTime((new Date()));
 			articleDao.insert(article);
 			List<Article> all = articleDao.findList(0, 10);
 			System.out.println(all);
